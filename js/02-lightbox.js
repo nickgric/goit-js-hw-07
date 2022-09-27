@@ -12,14 +12,6 @@ galleryItems.forEach((galleryItem) => {
 const galleryContentStr = galleryContentArr.join("");
 gallery.insertAdjacentHTML("afterbegin", galleryContentStr);
 
-const openModal = (event) => {
-  event.preventDefault();
-  if (event.target === gallery) {
-    return;
-  }
-  var lightbox = new SimpleLightbox(".gallery a", {
-    captionDelay: 250,
-  });
-};
-
-gallery.addEventListener("click", openModal);
+const lightboxGallery = new SimpleLightbox(".gallery a", {
+  captionDelay: 250,
+});
